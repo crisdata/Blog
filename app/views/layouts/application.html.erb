@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <title>Arca - Part Developer</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +18,15 @@
   </head>
 
   <body>
+    <header id="main-navigation" class="clearfix">
+        <a href="#" class="name">Cristhian Giraldo</a>
+        <nav>
+            <%= link_to "Articulos", posts_path %>
+            <a href="#">Proyectos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>
