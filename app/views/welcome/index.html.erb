@@ -1,0 +1,36 @@
+<div class="wrapper wrapper_padding clearfix">
+    <div class="col-1 about homepage_content">
+        <h2>About</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, magnam?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div class="col-2 homepage_content">
+        <h2>Stuff I've Written</h2>
+        <hr>
+
+        <!-- Esta linea me pone automaticamente el nuevo articulo creado
+        en mi pagina -->
+        <% @posts.each do |post| %>
+          <h3><a href="#"><%= link_to post.title, post %></a></h3>
+          <!-- post.created_at.strftime("%A, %b %d") - Pone automaticamente la fecha -->
+          <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+        <% end %>
+
+    </div>
+
+    <div class="col-3 homepage_content">
+        <h2>Stuff I've Built</h2>
+        <hr>
+        <h3><a href="#">Unicasts</a></h3>
+        <p class="date">Friday April 10th</p>
+
+        <h3><a href="#">Arca Community</a></h3>
+        <p class="date">Friday April 10th</p>
+
+        <h3><a href="#">12 in 12 Challenge</a></h3>
+        <p class="date">Friday April 10th</p>
+    </div>
+  </div>
