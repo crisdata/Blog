@@ -1,8 +1,30 @@
-<%= @post.title %><br>
-<%= @post.content %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @post.title %></h1>
+    <hr>
+  </header>
 
+  <div class="content">
+    <%= @post.content %>
+  </div>
+
+  <hr>
+
+  <div id="share_box">
+    <p>Share The DO List</p>
+    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @tapcrt - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fab fa-twitter"></i></a>
+    <a onclick="javascript:window.open('http://www.facebook.com/share.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fab fa-facebook"></i></a>
+    <a href="http://github.com/crisdata"><i class="fab fa-github"></i></a>
+  </div>
+
+  <hr>
+
+</div>
+<!---
 <br>
 <br>
 
-<%= link_to "Editar", edit_post_path(@post) %>
-<%= link_to "Eliminar", post_path(@post), method: :delete, data: { confirm: "¿Seguro que quieres eliminar esta publicación?"} %>
+<%#= link_to "Editar", edit_post_path(@post) %>
+<%#= link_to "Eliminar", post_path(@post), method: :delete, data: { confirm: "¿Seguro que quieres eliminar esta publicación?"} %>
+-->
