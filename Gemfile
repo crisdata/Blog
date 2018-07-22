@@ -22,7 +22,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'pygments.rb', '~> 0.6.3'
+# gem 'pygments.rb', '~> 0.6.3'
+gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 
 group :development, :test do
