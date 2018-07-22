@@ -6,7 +6,7 @@
   </header>
 
   <div class="content">
-    <%= @post.content %>
+    <%= markdown @post.content %>
   </div>
 
   <hr>
@@ -21,10 +21,6 @@
   <hr>
 
 </div>
-<!---
-<br>
-<br>
 
-<%#= link_to "Editar", edit_post_path(@post) %>
+<%= link_to "Editar", edit_post_path(@post) %>
 <%#= link_to "Eliminar", post_path(@post), method: :delete, data: { confirm: "¿Seguro que quieres eliminar esta publicación?"} %>
--->
