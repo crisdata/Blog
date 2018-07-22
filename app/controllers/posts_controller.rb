@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   before_action :find_post, only: %i[show edit update destroy]
 
-  def index; end
+  def index
+    @posts = Post.all.order('created_at desc')
+  end
 
   def new
     @post = Post.new
