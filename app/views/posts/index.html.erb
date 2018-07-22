@@ -9,11 +9,6 @@
         <hr>
       </div>
     <% end %>
-
-    <div class="pagination">
-      <span class="previous_page disabled">&larr; previous</span>
-      <em class="current">1</em>
-      <a href="#" rel="next">2</a>
-      <a href="#" class="next_page">Next &rarr;</a>
-    </div>
   </div>
+
+  <%= will_paginate @posts %>
