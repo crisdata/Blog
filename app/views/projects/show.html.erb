@@ -13,9 +13,15 @@
     </div>
   </div>
 
+  <% if user_signed_in? %>
+    <div id="admin_links">
+      <%= link_to "Editar Artículo", edit_post_path(@post) %>
+      <%= link_to "Eliminar Artículo", post_path(@post), method: :delete, data: {confirm: "¿Estás seguro?"} %>
+    </div>
+  <% end %>
 
   <hr>
 </div>
 
-<%= link_to "Editar", edit_project_path(@project) %>
+<%#= link_to "Editar", edit_project_path(@project) %>
 <%#= link_to "Eliminar", project_path(@project), method: :delete, data: { confirm: "¿Seguro que quieres eliminar esta publicación?"} %>
