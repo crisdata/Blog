@@ -225,7 +225,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  devise (~> 4.4, >= 4.4.3)
+  devise
   friendly_id (~> 5.2, >= 5.2.4)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
